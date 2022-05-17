@@ -16,6 +16,7 @@ public class devitoTest {
     String email = faker.internet().emailAddress();
 
     @BeforeAll
+
     static void setUp() {
         Configuration.browserSize = "1920x1080";
     }
