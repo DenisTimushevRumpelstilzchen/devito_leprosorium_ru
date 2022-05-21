@@ -8,15 +8,14 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class devitoTest {
+public class DevitoTest {
 
     Faker faker = new Faker();
 
-    String Hello = faker.backToTheFuture().quote();
+    String hello = faker.backToTheFuture().quote();
     String email = faker.internet().emailAddress();
 
     @BeforeAll
-
     static void setUp() {
         Configuration.browserSize = "1920x1080";
     }
@@ -25,7 +24,7 @@ public class devitoTest {
     void searchLeproTest() {
         open("https://leprosorium.ru/login/");
         $(".b-login_navigation_devito").click();
-        $("[id=js-devito_post_body]").setValue(Hello);
+        $("[id=js-devito_post_body]").setValue(hello);
         $("[id=js-devito_email]").setValue(email);
         $("[id=js-devito_form_submit]").click();
     }
