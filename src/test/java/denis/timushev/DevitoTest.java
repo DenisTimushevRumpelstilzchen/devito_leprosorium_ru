@@ -12,7 +12,7 @@ public class DevitoTest {
 
     Faker faker = new Faker();
 
-    String hello = faker.backToTheFuture().quote();
+    String hello = faker.rickAndMorty().quote();
     String email = faker.internet().emailAddress();
 
     @BeforeAll
